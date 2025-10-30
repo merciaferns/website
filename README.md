@@ -317,5 +317,3 @@
             showPage('home');
         }
     </script>
-</body>
-</html>
