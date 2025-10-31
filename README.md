@@ -22,32 +22,7 @@
             }
         }
     </script>
-    <style>
-        /* Custom scrollbar for better aesthetic */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #A32C2C;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0F172A;
-        }
-        
-        /* Ensure the body takes up the full viewport height */
-        body {
-            min-height: 100vh;
-        }
-        
-        /* Transition for smoother page switching */
-        .page-content {
-            transition: opacity 0.3s ease-in-out;
-        }
-        
-        /* Font Awesome icons (optional but good for contact page) */
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
-    </style>
+   
     <!-- Load Inter Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
