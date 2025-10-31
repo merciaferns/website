@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The SalvatOS</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for a dark, gothic aesthetic and Inter font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vampire-red': '#A32C2C', // Deep, sanguine red
+                        'gothic-gray': '#1E293B', // Dark slate/blue-gray
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+       <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+
+    <!-- Navigation Bar -->
+    <header class="bg-gothic-gray shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <!-- Updated Site Title -->
+            <h1 class="text-3xl font-bold text-vampire-red tracking-wider mb-3 sm:mb-0">The SalvatOS</h1>
+            
+            <!-- Updated Navigation Links -->
+            <nav class="flex space-x-4">
+                <button onclick="showPage('home')" class="nav-link py-2 px-4 rounded-full text-sm font-medium transition-colors duration-300 hover:bg-vampire-red hover:text-white">
+                    Home
+                </button>
+                <button onclick="showPage('about')" class="nav-link py-2 px-4 rounded-full text-sm font-medium transition-colors duration-300 hover:bg-vampire-red hover:text-white">
+                    About Me
+                </button>
+                <button onclick="showPage('portfolio')" class="nav-link py-2 px-4 rounded-full text-sm font-medium transition-colors duration-300 hover:bg-vampire-red hover:text-white">
+                    Portfolio
+                </button>
+                <button onclick="showPage('contact')" class="nav-link py-2 px-4 rounded-full text-sm font-medium transition-colors duration-300 hover:bg-vampire-red hover:text-white">
+                    Contact Me
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <!-- HOME PAGE (Updated Content) -->
+        <div id="home" class="page-content space-y-8">
+            <div class="bg-gothic-gray p-6 md:p-10 rounded-xl shadow-2xl text-center">
+                <h2 class="text-5xl font-extrabold mb-4 text-white">Welcome. I Am Mercia</h2>
+                <h3 class="text-2xl font-semibold mb-6 text-vampire-red">Developer. Designer. Dreamer.</h3>
+                <p class="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+                    Welcome to my personal archive. This space serves as a portfolio documenting my journey through code, design, and complex problem-solving. Explore the dark elegance of my work and see how I bring ideas to life.
+                </p>
+                
+                <a href="#" onclick="showPage('portfolio')" class="inline-block px-8 py-3 bg-vampire-red text-white font-bold rounded-full text-lg shadow-xl hover:bg-vampire-red/80 transition duration-300">
+                    View My Space
+                </a>
+            </div>
+
+            <!-- Image Block -->
+            <div class="bg-gothic-gray p-6 rounded-xl shadow-2xl">
+                <img src="https://placehold.co/1200x400/1E293B/A32C2C?text=My+First+Website" 
+                     alt="A dark, atmospheric placeholder image representing coding." 
+                     class="w-full h-auto rounded-lg object-cover"
+                     onerror="this.onerror=null; this.src='https://placehold.co/1200x400/1E293B/A32C2C?text=Modern+Design+Concept';">
+            </div>
+        </div>
+
+        <!-- ABOUT ME PAGE (UPDATED CONTENT) -->
+        <div id="about" class="page-content hidden space-y-6">
+            <h2 class="text-4xl font-extrabold text-vampire-red border-b-2 border-gray-700 pb-2">About My Journey</h2>
+            
+            <section class="bg-gothic-gray p-6 rounded-xl shadow-2xl">
+                <h3 class="text-3xl font-semibold mb-4 text-white">My Philosophy</h3>
+                <p class="text-gray-300 mb-4">I believe that the best solutions are born from curiosity, persistence, and a willingness to embrace complex challenges. My approach to development is rooted in clean code, user-centric design, and a dedication to high performance. Like the best supernatural secrets, true mastery requires dedication over decades.</p>
+            </section>
+
+            <!-- Hobbies and Growth Section (REPLACED SKILLS) -->
+            <section class="bg-gothic-gray p-6 rounded-xl shadow-2xl">
+                <h3 class="text-3xl font-semibold mb-4 text-white">My Passions & Current Focus</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-vampire-red">Current Hobbies</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                            <li>Reading high-fantasy and thriller novels.</li>
+                            <li>Watching series and films.</li>
+                            <li>Dancing to bollywood music.</li>
+                            <li>Exploring hiking trails (the only time I embrace the sun).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-vampire-red">Currently Pursuing</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                            <li>Studying BTech.</li>
+                            <li>Learning new languages.</li>
+                            <li>Daily Exercise.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- PORTFOLIO PAGE (Updated for Image Gallery) -->
+        <div id="portfolio" class="page-content hidden space-y-6">
+            <h2 class="text-4xl font-extrabold text-vampire-red border-b-2 border-gray-700 pb-2">My Creative Space (Gallery)</h2>
+            
+            <!-- Gallery Grid: 2 columns on tablet, 3 on desktop -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Gallery Item 1 -->
+                <div class="bg-gothic-gray p-4 rounded-xl shadow-2xl border border-gray-700 hover:border-vampire-red transition-all duration-300">
+                    <img src="f.jpg" 
+                         alt="Gallery Image 1 Placeholder" 
+                         class="w-full h-auto rounded-lg object-cover mb-3">
+                    <p class="text-gray-400 text-sm text-center">Fav Show</p>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="bg-gothic-gray p-4 rounded-xl shadow-2xl border border-gray-700 hover:border-vampire-red transition-all duration-300">
+                    <img src="ch.jpg" 
+                         alt="Gallery Image 2 Placeholder" 
+                         class="w-full h-auto rounded-lg object-cover mb-3">
+                    <p class="text-gray-400 text-sm text-center">Best Snack</p>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="bg-gothic-gray p-4 rounded-xl shadow-2xl border border-gray-700 hover:border-vampire-red transition-all duration-300">
+                    <img src="y.jpg" 
+                         alt="Gallery Image 3 Placeholder" 
+                         class="w-full h-auto rounded-lg object-cover mb-3">
+                    <p class="text-gray-400 text-sm text-center">Fav Place</p>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="bg-gothic-gray p-4 rounded-xl shadow-2xl border border-gray-700 hover:border-vampire-red transition-all duration-300">
+                    <img src="iks.jpg" 
+                         alt="Gallery Image 4 Placeholder" 
+                         class="w-full h-auto rounded-lg object-cover mb-3">
+                    <p class="text-gray-400 text-sm text-center">Personal Startup</p>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="bg-gothic-gray p-4 rounded-xl shadow-2xl border border-gray-700 hover:border-vampire-red transition-all duration-300">
+                    <img src="j.jpg" 
+                         alt="Gallery Image 5 Placeholder" 
+                         class="w-full h-auto rounded-lg object-cover mb-3">
+                    <p class="text-gray-400 text-sm text-center">Dream Location</p>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="bg-gothic-gray p-4 rounded-xl shadow-2xl border border-gray-700 hover:border-vampire-red transition-all duration-300">
+                    <img src="art.jpg" 
+                         alt="Gallery Image 6 Placeholder" 
+                         class="w-full h-auto rounded-lg object-cover mb-3">
+                    <p class="text-gray-400 text-sm text-center">Art Piece</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT ME PAGE (New Content - New Page) -->
+        <div id="contact" class="page-content hidden space-y-6">
+            <h2 class="text-4xl font-extrabold text-vampire-red border-b-2 border-gray-700 pb-2">Get In Touch</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Contact Form (2/3 width on desktop) -->
+                <section class="bg-gothic-gray p-6 rounded-xl shadow-2xl lg:col-span-2">
+                    <h3 class="text-3xl font-semibold mb-6 text-white">Send Me a Message</h3>
+                    
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <!-- Name -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full bg-gray-800 text-gray-100 p-3 rounded-lg border border-gray-700 focus:outline-none focus:ring-1 focus:ring-vampire-red focus:border-vampire-red transition duration-200">
+                        </div>
+                        
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-400 mb-1">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full bg-gray-800 text-gray-100 p-3 rounded-lg border border-gray-700 focus:outline-none focus:ring-1 focus:ring-vampire-red focus:border-vampire-red transition duration-200">
+                        </div>
+                        
+                        <!-- Message -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-400 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full bg-gray-800 text-gray-100 p-3 rounded-lg border border-gray-700 focus:outline-none focus:ring-1 focus:ring-vampire-red focus:border-vampire-red transition duration-200 resize-none"></textarea>
+                        </div>
+                        
+                        <!-- Status Message Display -->
+                        <div id="statusMessage" class="hidden p-3 rounded-lg text-center font-semibold transition-opacity duration-500 opacity-0"></div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" 
+                            class="w-full px-6 py-3 bg-vampire-red text-white font-bold rounded-lg shadow-lg hover:bg-vampire-red/80 transition duration-300 transform hover:scale-[1.01]">
+                            Send Secret Message
+                        </button>
+                    </form>
+                </section>
+            
+            <section class="bg-gothic-gray p-6 rounded-xl shadow-2xl">
+                <h3 class="text-3xl font-semibold mb-4 text-white">Connect with Me</h3>
+                <p class="text-gray-300 mb-6">I am always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out via the following channels:</p>
+                
+                <div class="space-y-4 max-w-md mx-auto">
+                    <!-- Email -->
+                    <div class="flex items-center space-x-4 p-3 bg-gray-800 rounded-lg shadow-inner border border-gray-700">
+                        <i class="fas fa-envelope text-vampire-red text-2xl w-8 text-center"></i>
+                        <span class="text-gray-300">Email:merciaferns2009@gmail.com</span>
+                    </div>
+                    <!-- LinkedIn -->
+                    <div class="flex items-center space-x-4 p-3 bg-gray-800 rounded-lg shadow-inner border border-gray-700">
+                        <i class="fab fa-linkedin text-vampire-red text-2xl w-8 text-center"></i>
+                        <span class="text-gray-300">Linkedin:/in/Mercia Fernandes</span>
+                    </div>
+                    <!-- GitHub -->
+                    <div class="flex items-center space-x-4 p-3 bg-gray-800 rounded-lg shadow-inner border border-gray-700">
+                        <i class="fab fa-github text-vampire-red text-2xl w-8 text-center"></i>
+                        <span class="text-gray-300">GitHub:/merciaferns</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-gothic-gray mt-12 py-6 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 The SalvatOS. Built with dark elegance.</p>
+    </footer>
+
+    <!-- JavaScript for Single Page Application Navigation -->
+    <script>
+        /**
+         * Function to simulate page switching in a Single Page Application (SPA).
+         * It hides all content divs and shows only the requested one.
+         * Note: The page IDs must match the divs and the showPage() calls.
+         */
+        function showPage(pageId) {
+            // Updated list of all page IDs
+            const pages = ['home', 'about', 'portfolio', 'contact'];
+            
+            pages.forEach(id => {
+                const pageElement = document.getElementById(id);
+                if (pageElement) {
+                    // Hide element and set opacity to 0 for fade-out
+                    pageElement.classList.add('hidden');
+                    pageElement.classList.remove('opacity-100');
+                    pageElement.classList.add('opacity-0');
+                }
+            });
+
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                // Remove 'hidden' first, then wait a beat to fade in
+                targetPage.classList.remove('hidden');
+                
+                // Use a short timeout to allow the display change to register before starting the opacity transition
+                setTimeout(() => {
+                    targetPage.classList.remove('opacity-0');
+                    targetPage.classList.add('opacity-100');
+                }, 10); 
+                
+                // Update active link styling
+                document.querySelectorAll('.nav-link').forEach(btn => {
+                    btn.classList.remove('bg-vampire-red', 'text-white');
+                    btn.classList.add('text-gray-300', 'hover:bg-vampire-red');
+                });
+
+                const activeBtn = document.querySelector(`button[onclick="showPage('${pageId}')"]`);
+                if (activeBtn) {
+                    activeBtn.classList.add('bg-vampire-red', 'text-white');
+                    activeBtn.classList.remove('text-gray-300', 'hover:bg-vampire-red');
+                }
+            }
+        }
+
+        // Initialize the page view on load
+        window.onload = function() {
+            showPage('home');
+        }
+   
+</script>
+</body>
+</html>
